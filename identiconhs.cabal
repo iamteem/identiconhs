@@ -1,0 +1,32 @@
+name:                identiconhs
+version:             0.1.0.0
+synopsis:            Generate identicon images.
+description:         Based on the elixir tutorial
+homepage:            https://github.com/iamteem/identiconhs#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Tim Medina
+maintainer:          iamteem@gmail.com
+copyright:           Tim Medina
+category:            Images
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+
+-- executable identicon
+--   hs-source-dirs:      src
+--   main-is:             Main.hs
+--   default-language:    Haskell2010
+--   build-depends:       base >= 4.7 && < 5
+--                      , identiconhs
+                     
+library
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  exposed-modules:     Identicon
+  build-depends:       base >= 4.7 && < 5
+                     , cryptohash-md5
+                     , bytestring
+                     , split
+                     , JuicyPixels >= 3.2.8
