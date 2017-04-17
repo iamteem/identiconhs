@@ -21,7 +21,6 @@ run s = do
   let color = getColor hash
   let pixelMap = getEvenPixels $ buildPixelMap hash
   let coords = translatePixels pixelMap
-  putStrLn $ show coords
   let image = createImage color coords
   saveImage image s
 
