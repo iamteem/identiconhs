@@ -5,6 +5,5 @@ import System.Environment (getArgs)
 
 main :: IO ()
 main = do
-  args <- getArgs
-  let string = args !! 0
+  (string:_) <- getArgs
   Identicon.run string
